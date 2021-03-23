@@ -1,4 +1,4 @@
-# marathon-du-web
+# marathon-du-web - Equipe 5
 Projet sur une semaine en partenariat avec l'Université Montpellier 3 et NumeRev
 
 
@@ -23,9 +23,14 @@ Numerev (data/info-visualisation). Trois besoin en terme de data science/ dev :
 - machine learning : extraire thème, domaines et concept.
 - reporting : création d’une carte orienté graphe de la connaissance
 - Base de données
-
-## l'équipe Groupe 5
+  
 Ainsi, nous nous positionnant dans le développement d’une fonctionnalité de l’outil dans le but d’aider les
 lecteurs dans leur navigation/lecture des articles.
 
+## Données fournies
+- Extraction de table MySQL au format CSV
+- Schéma de la BDD + description
+- Comprend une centaine d'articles et un peu plus de 2600 mots clés.
+
+### liens 
 https://trello.com/b/CNesGkiX/marathon-du-web
