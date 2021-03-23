@@ -26,9 +26,20 @@ Numerev (data/info-visualisation). Trois besoin en terme de data science/ dev :
   
 Ainsi, nous nous positionnant dans le développement d’une fonctionnalité de l’outil dans le but d’aider les
 lecteurs dans leur navigation/lecture des articles.
+  
+La maquette du site et la base de données sont en cours de conception et doivent encore être validés. 
+
+## Rôles et tâches
+### Gestion de projet
+Gestion du trello : Zoé
+Gestion du git : Mélody
+Romain : Diapo de soutenance
+Justin : documentation des besoins , graphiques, résumés 
+### Développement
+A définir
 
 ## Données fournies
-- Extraction de table MySQL au format CSV
+- Extraction de 12 tables MySQL au format CSV. Ces tables comprennent les utilisateurs, auteurs, revue, publication, numéros et des mots clés.
 - Schéma de la BDD + description
 - Comprend une centaine d'articles et un peu plus de 2600 mots clés.
 
