@@ -31,7 +31,7 @@ La maquette du site et la base de données sont en cours de conception et doiven
 
 ## Rôles et tâches
 
-![alt text](organigramme.png)
+![alt text](./organigramme.png)
 ### Gestion de projet
 Gestion du trello : Zoé
 Gestion du git : Mélody
