@@ -30,6 +30,8 @@ lecteurs dans leur navigation/lecture des articles.
 La maquette du site et la base de données sont en cours de conception et doivent encore être validés. 
 
 ## Rôles et tâches
+
+![alt text](organigramme.png)
 ### Gestion de projet
 Gestion du trello : Zoé
 Gestion du git : Mélody
@@ -46,3 +48,4 @@ A définir
 ### liens 
 https://trello.com/b/CNesGkiX/marathon-du-web
 https://drive.google.com/drive/folders/1twaBSZP7YRsha28VzlbuvaENB8qRmVmD
+https://app.diagrams.net/#G185aVPCHDDNnThBnNHGKBa6HBfcChWK6v
