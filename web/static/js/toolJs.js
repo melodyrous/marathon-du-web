@@ -1,10 +1,11 @@
 function takeData(url){
-    // https://github.com/d3/d3-request/blob/master/README.md#json
-    
     var data = data
-    d3.request(url, function(error, response) {
-        data = response
-    });
+    d3.json(url).get(
+    	function(data_temp){
+    		data = data_temp;
+    	});
+    return data;
+    
 }
 
 

@@ -84,29 +84,29 @@ WSGI_APPLICATION = 'Numerev.wsgi.application'
 # settings.py
 
 # https://dev.mysql.com/doc/refman/8.0/en/option-files.html
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         "NAME" : "numerev",
-#         "USER" : "root",
-#         "PASSWORD" : "root",
-#         "HOST": "127.0.0.2",
-#         "PORT": "3306",
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        "NAME" : "marathon_web",
+        "USER" : "root",
+        "PASSWORD" : "",
+        "HOST": "127.0.0.1",
+        "PORT": "3306",
+    }
+}
 
 ## Intégrer mysql par docker : https://medium.com/@migueldoctor/run-mysql-phpmyadmin-locally-in-3-steps-using-docker-74eb735fa1fc
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': './db.sqlite3',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    },
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': './db.sqlite3',
+#         'USER': '',
+#         'PASSWORD': '',
+#         'HOST': '',
+#         'PORT': '',
+#     },
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

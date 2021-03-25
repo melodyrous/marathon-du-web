@@ -14,6 +14,8 @@ urlpatterns = [
     # http://127.0.0.1:8000/graph/resquestRelation/idword=1/rel=-1/succ=1
 
     ### resquestRelationAll/idword=1
+    path('resquestRelationAll/', views.RequestRelation.as_view()),
+
     path('resquestRelationAll/idword=<int:id_word>', views.RequestRelation.as_view()),
     
     # ### resquestRelationNiveau/idword=1/rel=apa
@@ -25,17 +27,20 @@ urlpatterns = [
     #### Get mot ####
 
     ### resquestMotID/id=1/
-    path('resquestMotID/id=<int:id_mots>/', views.RequestMots.as_view()),
+    path('resquestMotID/id=<int:id_mot>/', views.Requestmot.as_view()),
     
-    ### graph/resquestMotSTR/mot=psy/
-    path('resquestMotSTR/mot=<str:mots>/', views.RequestMots.as_view()),
+    ### graph/resquestmotTR/mot=psy/
+    path('resquestmotSTR/mot=<str:mot>/', views.Requestmot.as_view()),
     
     ### resquestMotLVL/niveau=d/exclude=0/
     ### resquestMotLVL/niveau=d/exclude=1/
-    path('resquestMotLVL/niveau=<str:niveau>/exclude=<int:exclude>/', views.RequestMots.as_view()),
+    path('resquestMotLVL/cat=<str:cat>/exclude=<int:exclude>/', views.Requestmot.as_view()),
+    
+    ### resquestMotLVL/niveau=d/exclude=1/
+    path('resquestMotLVLINT/niveau=<int:niveau>/exclude=<int:exclude>/', views.Requestmot.as_view()),
     
     #### Get article ####
 
     path('presentationArticle/<int:id_article>/', views.showArticle, name="showArticle")
-    #path('allWord', views.RequestMots.as_view(), name='allWord'),
+    #path('allWord', views.Requestmot.as_view(), name='allWord'),
 ]

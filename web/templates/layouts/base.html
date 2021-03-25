@@ -7,19 +7,19 @@
   <title>Numerev</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default_style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/fa-v4-shims.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/jcemediabox.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/module.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/smartslider.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/template.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/tipTip.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
-  
-  <script src="https://d3js.org/d3.v4.js"></script>
-  <script src="{% static 'js/navGraphic.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/default_style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/fa-v4-shims.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/jcemediabox.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/module.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/smartslider.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/template.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tipTip.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/navGraph.css' %}">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <script src="{% static 'js/toolJs.js' %}"></script>
 </head>
 
@@ -33,50 +33,29 @@ data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
 
       <div class="container text-break">
         <div class="row">
-          <div class="col-12 text-center">
-            <!-- Doc input : https://getbootstrap.com/docs/4.0/components/forms/ !-->
-
-
-
-            <label for="here">Type de graph</label>
-            <div class="form-check col-12 row" id="here">
-              <div class="col-4">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
-                  checked>
-                <label class="form-check-label" for="exampleRadios1">
-                  Hiérarchique
-                </label>
-              </div>
-              <div class="col-4">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                  Destructurer
-                </label>
-              </div>
-            </div>
-
-
-          </div>
-
-          <div class="col-12 text-center">
-
-            LE GRAPHIQUE DE NAVIGATION EST ICI !
+          <div class="col-12">
+            
 
             <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Requete</span>
-              </div>
-              <input type="text" class="form-control" id="msg" aria-label="Default"
-                value="graph/resquestRelationSuccessor/idword=1/succ=3" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Requete</span>
+                 </div>
+                      <input type="text" class="form-control" id="msg" aria-label="Default" value="graph/resquestMotLVLINT/niveau=1/exclude=1/" aria-describedby="inputGroup-sizing-default">
+             </div>
+
+                <button class="btn btn-primary"
+               onclick="console.log(takeData(document.getElementById('msg').value)); document.getElementById('vue').innerHTML = document.getElementById('msg').value ">Exemple
+               de bouton
+                </button>
+                <div id="vue">
+                </div>
+
             </div>
 
-            <button class="btn btn-primary"
-              onclick="console.log(takeData(document.getElementById('msg').value)); document.getElementById('vue').innerHTML = document.getElementById('msg').value ">Exemple
-              de bouton</button>
-            <div id="vue">
+            <div class="col-12 text-center" id="graphic">
 
             </div>
-          </div>
+          
         </div>
       </div>
 
@@ -87,6 +66,7 @@ data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
 
     </div>
   </div>
+  <script src="{% static 'js/navGraphic.js' %}"></script>
 </body>
 
 </html>

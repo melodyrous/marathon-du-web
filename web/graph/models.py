@@ -6,18 +6,19 @@ from django.db import models
 ################################ Issue de notre base de donnée créer ################################
 
 
-class Mots(models.Model):
+class Mot(models.Model):
     ## Doc pour la création des models : https://docs.djangoproject.com/fr/3.1/ref/models/fields/
-    mots = models.TextField()
-    niveau = models.CharField(max_length=40)
-    id_in_base = models.IntegerField(blank=True)
+    motcol = models.TextField()
+    niveau = models.CharField(max_length=50)
+    resume = models.TextField(blank=True)
+    identifiant = models.IntegerField()
     class Meta:
-        db_table="mots"
+        db_table="mot"
 
 
 class Relation(models.Model):
-    id_predecesseur = models.ForeignKey(Mots, on_delete=models.CASCADE, related_name='predecesseur')
-    id_sucesseur = models.ForeignKey(Mots, on_delete=models.CASCADE, related_name='sucesseur')
+    id_enfant = models.ForeignKey(Mot, on_delete=models.DO_NOTHING, db_column='id_enfant', related_name='id_enfant')
+    id_parent = models.ForeignKey(Mot, on_delete=models.DO_NOTHING, db_column='id_parent', related_name='id_parent')
     # type_relation = models.CharField(max_length=40)
     class Meta:
         db_table="relation"
