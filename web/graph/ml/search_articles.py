@@ -13,22 +13,22 @@ import numpy as np
 
 class Data_utils():
 
-    def __init__(self):
+    def __init__(self, data):
 
-        self.original_dataframe = self.prepare_original_dataframe()
+        self.original_dataframe = self.prepare_original_dataframe(data)
 
-    def get_all_publis_from_database(self):
-        db_df = pd.read_csv("mot.csv", sep=";",encoding="utf8", names =["idmot","motcol","niveau","identifiant","resume"])
+    def get_all_publis_from_database(self, data):
+        db_df = pd.DataFrame(data)
         return db_df
 
-    def prepare_original_dataframe(self):
+    def prepare_original_dataframe(self, data):
         """ Prepare the original dataframe from full corpus """
         def cleanhtml(raw_html):
             cleanr = re.compile('<.*?>')
             cleantext = re.sub(cleanr, '', raw_html)
             return html.unescape(cleantext)
 
-        df_publis = self.get_all_publis_from_database()
+        df_publis = self.get_all_publis_from_database(data)
         df_publis["motcol"] = df_publis.motcol.apply(lambda x: cleanhtml(BeautifulSoup(x).text))
         df_publis["resume"] = df_publis.resume.apply(lambda x: cleanhtml(BeautifulSoup(x).text) if x is not np.NaN else x)
         return df_publis
@@ -37,10 +37,10 @@ class Data_utils():
 
 class SemanticSimilarity():
 
-    def __init__(self):
+    def __init__(self, data, urlCorpus = "./ml/corpus_embeddings.pt"):
         #self.corpus_embeddings = torch.load("./notebooks/corpus_embeddings.pt")
-        self.corpus_embeddings = torch.load("./corpus_embeddings.pt")
-        self.data_utils = Data_utils()
+        self.corpus_embeddings = torch.load(urlCorpus)
+        self.data_utils = Data_utils(data)
         self.data_corpus = self.prepare_original_dataframe()
         self.model = SentenceTransformer('allenai-specter')
 
@@ -57,7 +57,7 @@ class SemanticSimilarity():
         """
         #TODO prétraiter le texte importé
         df_publis = self.data_utils.original_dataframe
-        paper = df_publis[df_publis.idmot == id_article]
+        paper = df_publis[df_publis.id == id_article]
 #        print(paper)
         text = paper.motcol +" "+ paper.resume
 
@@ -69,7 +69,7 @@ class SemanticSimilarity():
             related_paper = self.data_corpus.iloc[hit['corpus_id'],:]
             titre_selected = self.data_utils.original_dataframe.motcol == related_paper['motcol']
             if self.data_utils.original_dataframe[titre_selected].resume.values[0] != ";":
-                matchs.append(self.data_utils.original_dataframe[titre_selected].idmot.values[0])
+                matchs.append(self.data_utils.original_dataframe[titre_selected].id.values[0])
             
             
         
@@ -80,5 +80,5 @@ class SemanticSimilarity():
     def prepare_original_dataframe(self):
         """Prepare the dataframe """
         df_publis = self.data_utils.original_dataframe
-        df = df_publis.loc[:,["motcol","resume","idmot"]].dropna()
+        df = df_publis.loc[:,["motcol","resume","id"]].dropna()
         return df
