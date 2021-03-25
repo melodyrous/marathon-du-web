@@ -1,0 +1,216 @@
+/*
+ * MOD_IC_EVENT_LIST
+ * iCagenda by JoomliC
+ * Default css file for iCagenda event list module
+ *
+ * @layout      default
+ * @author      Cyril Rezé (Lyr!C) - https://www.joomlic.com
+ * @version     3.14.4 2017-08-14
+ * @since       1.0
+ */
+
+
+/*
+ * EVENT LIST STYLES
+ */
+
+#ic_eventlist {
+	width: 100%;
+}
+
+/*  SECTIONS  */
+.ic-section {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/*  COLUMN SETUP  */
+.ic-col {
+	display: block;
+	float: left;
+	margin: 0 0.2% 4px 0.2%;
+}
+
+/*  GROUPING  */
+.ic-group:before,
+.ic-group:after {
+	content: "";
+	display: table;
+}
+.ic-group:after {
+	clear: both;
+}
+
+/*  GRID OF COLUMNS  */
+.ic-col1 {
+	width: 100%;
+	margin: 0 0 4px 0;
+}
+.ic-col2 {
+	width: 49.6%;
+}
+.ic-col3 {
+	width: 32.933333333%;
+}
+.ic-col4 {
+	width: 24.6%;
+}
+
+/*  DISPLAY 3 COLS IF 4 SELECTED AT LESS THAN 980 PX AND MORE 768 PX */
+@media (min-width: 768px) and (max-width: 980px) {
+	.ic-col4 {
+		width: 32.933333333%;
+	}
+}
+
+/*  DISPLAY 2 COLS IF 3 OR 4 SELECTED AT LESS THAN 767 PX AND MORE 481 PX */
+@media (min-width: 481px) and (max-width: 767px) {
+	.ic-col3 {
+		width: 49.6%;
+	}
+	.ic-col4 {
+		width: 49.6%;
+	}
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.ic-col2 {
+		width: 100%;
+	}
+	.ic-col3 {
+		width: 100%;
+	}
+	.ic-col4 {
+		width: 100%;
+	}
+}
+
+/* Messages Info */
+.ic-msg-no-event {
+	font-size: 0.8em;
+	text-align: center;
+}
+
+
+/* Bottom line <hr> tag */
+.default_eventlist hr {
+	margin: 8px 0;
+}
+
+/* Style Background alternative */
+.default_eventlist {}
+.default_eventlist:nth-child(2n+1) {}
+
+/* Style Background hover */
+.default_eventlist:hover {}
+
+
+/* Style Div */
+.default_eventlist .ic-inline-block {
+	display: inline-block;
+	margin: auto 0;
+}
+.default_eventlist .ic-block {
+	display: block;
+	margin: auto 3px;
+}
+.default_eventlist .ic-event-div {
+	margin-bottom: 0;
+	min-height: 42px;
+}
+.default_eventlist .ic-date-img-box {
+	float: left;
+	margin: 4px 6px 0 0;
+}
+.default_eventlist .ic-date-div {
+	height: 34px;
+	width: 36px;
+	text-align: center;
+	padding-top: 15%;
+	text-shadow: rgba(0,0,0,0.5) 0 0 7px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	box-sizing: content-box;
+}
+.default_eventlist .ic-day {
+	line-height: 18px !important;
+	font-size: 16px;
+	font-weight: bold;
+}
+.default_eventlist .ic-month {
+	line-height: 12px !important;
+	font-size: 12px;
+	font-weight: normal;
+}
+.default_eventlist .iceventlist-title {
+	padding-top: 3px;
+	line-height: 15px !important;
+	font-size: 13px;
+	font-weight: bold;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
+}
+.default_eventlist .iceventlist-venue {
+	line-height: 15px !important;
+	font-size: 12px;
+}
+.default_eventlist .iceventlist-city,
+.default_eventlist .ic-datetime-div {
+	line-height: 14px !important;
+	font-size: 11px;
+}
+.default_eventlist .ic-datetime-label {
+	font-weight: bold;
+}
+.default_eventlist .iceventlist-desc {
+	font-size: 12px;
+}
+.default_eventlist .iceventlist-registration-info {
+}
+.default_eventlist .ic-reg {
+	font-size: 10px;
+	margin: 0 2px;
+	padding: 0 5px;
+	text-align: center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 1px #333;
+	cursor: pointer;
+}
+.default_eventlist span.ic-reg.available {
+	background: white;
+	color: black;
+}
+.default_eventlist span.ic-reg.ticketsleft {
+	background: green;
+	color: white;
+}
+.default_eventlist span.ic-reg.registered {
+	background: blue;
+	color: white;
+}
+
+/* Features Icons */
+.default_eventlist .iceventlist-features-container {
+	margin: 0;
+}
+.default_eventlist .iceventlist-feature-icon {
+	float: none;
+	display: inline-block;
+	margin: 0 0.5px;
+}

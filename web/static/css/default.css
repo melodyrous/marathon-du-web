@@ -1,0 +1,169 @@
+/**
+ * @package Helix Ultimate Framework
+ * @author JoomShaper https://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2018 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or Later
+ */
+body, .sp-preloader {
+  background-color: #fff;
+  color: #ffffff;
+}
+.sp-preloader > div {
+  background: #0345bf;
+}
+.sp-preloader > div:after {
+  background: #fff;
+}
+#sp-top-bar {
+  background: #333;
+  color: #aaa;
+}
+#sp-top-bar a {
+  color: #aaa;
+}
+#sp-header {
+  background: #ff8000;
+}
+a {
+  color: #fff;
+}
+a:hover, a:focus, a:active {
+  color: #fff;
+}
+.tags > li {
+  display: inline-block;
+}
+.tags > li a {
+  background: rgba(3, 69, 191, 0.1);
+  color: #0345bf;
+}
+.tags > li a:hover {
+  background: #044cd0;
+}
+.article-social-share .social-share-icon ul li a {
+  color: #242424;
+}
+.article-social-share .social-share-icon ul li a:hover, .article-social-share .social-share-icon ul li a:focus {
+  background: #0345bf;
+}
+.pager > li a {
+  border: 1px solid #ededed;
+  color: #242424;
+}
+.sp-reading-progress-bar {
+  background-color: #ff8000;
+}
+.sp-megamenu-parent > li > a {
+  color: #fff;
+}
+.sp-megamenu-parent > li:hover > a {
+  color: #fff;
+}
+.sp-megamenu-parent > li.active > a, .sp-megamenu-parent > li.active:hover > a {
+  color: #fff;
+}
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+  background: #fff;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a {
+  color: #ff8000;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a:hover {
+  color: #ff8000;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a {
+  color: #ff8000;
+}
+.sp-megamenu-parent .sp-mega-group > li > a {
+  color: #ff8000;
+}
+#offcanvas-toggler > .fa {
+  color: #fff;
+}
+#offcanvas-toggler > .fa:hover, #offcanvas-toggler > .fa:focus, #offcanvas-toggler > .fa:active {
+  color: #fff;
+}
+.offcanvas-menu {
+  background-color: #ff8000;
+  color: #fff;
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li a, .offcanvas-menu .offcanvas-inner .sp-module ul > li span {
+  color: #fff;
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li a:hover, .offcanvas-menu .offcanvas-inner .sp-module ul > li span:hover, .offcanvas-menu .offcanvas-inner .sp-module ul > li a:focus, .offcanvas-menu .offcanvas-inner .sp-module ul > li span:focus {
+  color: #fff;
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li.menu-parent > a > .menu-toggler, .offcanvas-menu .offcanvas-inner .sp-module ul > li.menu-parent > .menu-separator > .menu-toggler {
+  color: rgba(37, 37, 37, 0.5);
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li ul li a {
+  color: rgba(37, 37, 37, 0.8);
+}
+.btn-primary, .sppb-btn-primary {
+  border-color: #fff;
+  background-color: #ff8000;
+}
+.btn-primary:hover, .sppb-btn-primary:hover {
+  border-color: #fff;
+  background-color: #ff8000;
+}
+ul.social-icons > li a:hover {
+  color: #0345bf;
+}
+.sp-page-title {
+  background: #0345bf;
+}
+.layout-boxed .body-innerwrapper {
+  background: #fff;
+}
+.sp-module ul > li > a {
+  color: #242424;
+}
+.sp-module ul > li > a:hover {
+  color: #0345bf;
+}
+.sp-module .latestnews > div > a {
+  color: #242424;
+}
+.sp-module .latestnews > div > a:hover {
+  color: #0345bf;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #0345bf;
+}
+.search .btn-toolbar button {
+  background: #0345bf;
+}
+#sp-footer, #sp-bottom {
+  background: #171717;
+  color: #fff;
+}
+#sp-footer a, #sp-bottom a {
+  color: #a2a2a2;
+}
+#sp-footer a:hover, #sp-bottom a:hover, #sp-footer a:active, #sp-bottom a:active, #sp-footer a:focus, #sp-bottom a:focus {
+  color: #fff;
+}
+#sp-bottom .sp-module-content .latestnews > li > a > span {
+  color: #fff;
+}
+.sp-comingsoon body {
+  background-color: #0345bf;
+}
+.pagination > li > a, .pagination > li > span {
+  color: #242424;
+}
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+  color: #242424;
+}
+.pagination > .active > a, .pagination > .active > span {
+  border-color: #0345bf;
+  background-color: #0345bf;
+}
+.pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  border-color: #0345bf;
+  background-color: #0345bf;
+}
+.error-code, .coming-soon-number {
+  color: #0345bf;
+}

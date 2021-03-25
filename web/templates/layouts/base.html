@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Numerev</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fa-v4-shims.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jcemediabox.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/module.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/smartslider.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/template.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tipTip.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+  
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="{% static 'js/navGraphic.js' %}"></script>
+  <script src="{% static 'js/toolJs.js' %}"></script>
+</head>
+
+<body class="site helix-ultimate com-content view-article layout-default task-none itemid-101 fr-fr ltr sticky-header layout-fluid offcanvas-init offcanvs-position-right"
+data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
+  <div class="body-warpper">
+    <div class="body-innerwarpper">
+
+      {% include "layouts/title.html" %}
+      {% block content %}
+
+      <div class="container text-break">
+        <div class="row">
+          <div class="col-12 text-center">
+            <!-- Doc input : https://getbootstrap.com/docs/4.0/components/forms/ !-->
+
+
+
+            <label for="here">Type de graph</label>
+            <div class="form-check col-12 row" id="here">
+              <div class="col-4">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  Hiérarchique
+                </label>
+              </div>
+              <div class="col-4">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  Destructurer
+                </label>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="col-12 text-center">
+
+            LE GRAPHIQUE DE NAVIGATION EST ICI !
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Requete</span>
+              </div>
+              <input type="text" class="form-control" id="msg" aria-label="Default"
+                value="graph/resquestRelationSuccessor/idword=1/succ=3" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <button class="btn btn-primary"
+              onclick="console.log(takeData(document.getElementById('msg').value)); document.getElementById('vue').innerHTML = document.getElementById('msg').value ">Exemple
+              de bouton</button>
+            <div id="vue">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {% endblock %}
+      {% include "layouts/bottom.html" %}
+
+    </div>
+  </div>
+</body>
+
+</html>
