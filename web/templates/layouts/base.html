@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/navGraph.css' %}">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-  <script src="{% static 'js/toolJs.js' %}"></script>
+
 </head>
 
 <body class="site helix-ultimate com-content view-article layout-default task-none itemid-101 fr-fr ltr sticky-header layout-fluid offcanvas-init offcanvs-position-right"
@@ -34,26 +34,17 @@ data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
       <div class="container text-break">
         <div class="row">
           <div class="col-12">
-            
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Requete</span>
-                 </div>
-                      <input type="text" class="form-control" id="msg" aria-label="Default" value="graph/resquestMotLVLINT/niveau=1/exclude=1/" aria-describedby="inputGroup-sizing-default">
-             </div>
-
-                <button class="btn btn-primary"
-               onclick="console.log(takeData(document.getElementById('msg').value)); document.getElementById('vue').innerHTML = document.getElementById('msg').value ">Exemple
-               de bouton
-                </button>
-                <div id="vue">
-                </div>
-
             </div>
 
             <div class="col-12 text-center" id="graphic">
 
+            </div>
+            <div class="col-12 text-center" id="box">
+
+            </div>
+            
+            <div class="col-12 border-dark rounded" id="vue">
+              
             </div>
           
         </div>
@@ -66,6 +57,7 @@ data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
 
     </div>
   </div>
+  <script src="{% static 'js/toolJs.js' %}"></script>
   <script src="{% static 'js/navGraphic.js' %}"></script>
 </body>
 

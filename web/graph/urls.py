@@ -14,7 +14,7 @@ urlpatterns = [
     # http://127.0.0.1:8000/graph/resquestRelation/idword=1/rel=-1/succ=1
 
     ### resquestRelationAll/
-    path('resquestRelation/', views.RequestRelation.as_view()),
+    path('resquestTree/', views.RequestAllTree.as_view()),
     
     ### resquestRelationSuccessor/idword=1/succ=3
     path('resquestRelation/idword=<int:id_word>', views.RequestRelation.as_view()),
@@ -26,12 +26,12 @@ urlpatterns = [
 
     ### resquestMotID/id=1/
     path('resquestMotID/id=<int:id_mot>/', views.Requestmot.as_view()),
+    path('resquestMot/id=<int:id_mot>/<str:article>', views.Requestmot.as_view()),
+     path('resquestMot/id=<int:id_mot>', views.Requestmot.as_view()),
     
+   
       ### resquestMotLVL/niveau=d/exclude=1/
     path('resquestMotLVL/niveau=<int:niveau>/', views.Requestmot.as_view()),
     
-    #### Get article ####
 
-    path('presentationArticle/<int:id_article>/', views.showArticle, name="showArticle")
-    #path('allWord', views.Requestmot.as_view(), name='allWord'),
 ]

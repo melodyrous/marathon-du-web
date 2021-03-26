@@ -1,11 +1,19 @@
-function takeData(url){
-    var data = data
-    d3.json(url).get(
-    	function(data_temp){
-    		data = data_temp;
-    	});
-    return data;
-    
+function keepArticle(id){
+
+    d3.json("graph/resquestMot/id="+id+"/n", function(data){
+    	str = "<h1 class='text-center col-12'>" + data[1]+"</h1>"
+    	/*str += '<ul class="list-group">'
+  
+
+    	for (i in data.slice(3)){
+    		str += "<li class='list-group-item'><button onclick='keepArticle("+i["id"]+")'>"+i["name"]+"</li>"
+    	}
+    	str += '</ul>'*/
+
+    	str += "<p class='col-12'>" + data[2]+"</p>"
+    	document.getElementById('vue').innerHTML = str
+
+   })
 }
 
 

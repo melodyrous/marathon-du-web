@@ -1,42 +1,91 @@
-
-//Jeux de données
 var data = [
 	// Article
-	{"name" : "Article 1", "parent": "Mot clef 1"},
-	{"name" : "Article 2", "parent": "Mot clef 1"},
-	{"name" : "Article 3", "parent": "Mot clef 1"},
-	{"name" : "Article 4", "parent": "Mot clef 2"},
-	{"name" : "Article 5", "parent": "Mot clef 2"},
-	{"name" : "Article 6", "parent": "Mot clef 2"},
-	{"name" : "Article 7", "parent": "Mot clef 2"},
-	{"name" : "Article 8", "parent": "Mot clef 3"},
+	{"name" : "Eprouver l'inquiétante étrangeté de l'altérité", "&lt;p style=&quot;text-align:justify&quot;&gt;Le pr&amp;eacute;sent article interroge l&amp;rsquo;&amp;eacute;preuve de l&amp;rsquo;alt&amp;eacute;rit&amp;eacute; au sein de l&amp;rsquo;exp&amp;eacute;rience du comprendre, telle que la consid&amp;egrave;re la th&amp;eacute;orie herm&amp;eacute;neutique de H.-G. Gadamer. En partant de la controverse entre Gadamer et Derrida autour de la &amp;laquo;&amp;nbsp;bonne volont&amp;eacute; de comprendre&amp;nbsp;&amp;raquo;, nous chercherons &amp;agrave; cerner le concept herm&amp;eacute;neutique d&amp;rsquo;autre, pens&amp;eacute; non pas en termes d&amp;rsquo;&amp;eacute;tranget&amp;eacute; et de rupture, mais &amp;mdash;&amp;nbsp;comme le sugg&amp;egrave;re le mod&amp;egrave;le gadam&amp;eacute;rien de la compr&amp;eacute;hension comme dialogue&amp;nbsp;&amp;mdash; &amp;agrave; partir de la communaut&amp;eacute;. Pour cela, nous explorerons le rapport entre le &amp;laquo;&amp;nbsp;moi&amp;nbsp;&amp;raquo; et l&amp;rsquo;autre &amp;agrave; l&amp;rsquo;&amp;oelig;uvre dans l&amp;rsquo;exp&amp;eacute;rience de l&amp;rsquo;&amp;eacute;coute, o&amp;ugrave; l&amp;rsquo;autre devient &amp;laquo;&amp;nbsp;toi&amp;nbsp;&amp;raquo;. La question sera de savoir dans quelle mesure la conception herm&amp;eacute;neutique pr&amp;eacute;suppose la reconnaissance de l&amp;rsquo;autre en tant qu&amp;rsquo;autre&amp;nbsp;: la communaut&amp;eacute; est-elle possible sans effacement de l&amp;rsquo;alt&amp;eacute;rit&amp;eacute;&amp;nbsp;?&lt;/p&gt;\r\n\r\n&lt;p style=&quot;text-align:justify&quot;&gt;&lt;strong&gt;Mots-cl&amp;eacute;s&lt;/strong&gt;&amp;nbsp;: H.-G. Gadamer, herm&amp;eacute;neutique, alt&amp;eacute;rit&amp;eacute;, compr&amp;eacute;hension, dialogue, &amp;eacute;coute&lt;/p&gt;\r\n": "Salut c moi 1", "parent": "enseignants"},
+	{"name" : "Eprouver l'inquiétante étrangeté de l'altérité", "text": "Salut c moi 2", "parent": "sociolinguistique"},
+
+	{"name" : "Etre à l'écoute de l'autre : la compréhension comme épreuve de l'altérité (dans l'herméneutique de Hans-Georg Gadamer)", "text": "&lt;p style=&quot;text-align:justify&quot;&gt;Le pr&amp;eacute;sent article interroge l&amp;rsquo;&amp;eacute;preuve de l&amp;rsquo;alt&amp;eacute;rit&amp;eacute; au sein de l&amp;rsquo;exp&amp;eacute;rience du comprendre, telle que la consid&amp;egrave;re la th&amp;eacute;orie herm&amp;eacute;neutique de H.-G. Gadamer. En partant de la controverse entre Gadamer et Derrida autour de la &amp;laquo;&amp;nbsp;bonne volont&amp;eacute; de comprendre&amp;nbsp;&amp;raquo;, nous chercherons &amp;agrave; cerner le concept herm&amp;eacute;neutique d&amp;rsquo;autre, pens&amp;eacute; non pas en termes d&amp;rsquo;&amp;eacute;tranget&amp;eacute; et de rupture, mais &amp;mdash;&amp;nbsp;comme le sugg&amp;egrave;re le mod&amp;egrave;le gadam&amp;eacute;rien de la compr&amp;eacute;hension comme dialogue&amp;nbsp;&amp;mdash; &amp;agrave; partir de la communaut&amp;eacute;. Pour cela, nous explorerons le rapport entre le &amp;laquo;&amp;nbsp;moi&amp;nbsp;&amp;raquo; et l&amp;rsquo;autre &amp;agrave; l&amp;rsquo;&amp;oelig;uvre dans l&amp;rsquo;exp&amp;eacute;rience de l&amp;rsquo;&amp;eacute;coute, o&amp;ugrave; l&amp;rsquo;autre devient &amp;laquo;&amp;nbsp;toi&amp;nbsp;&amp;raquo;. La question sera de savoir dans quelle mesure la conception herm&amp;eacute;neutique pr&amp;eacute;suppose la reconnaissance de l&amp;rsquo;autre en tant qu&amp;rsquo;autre&amp;nbsp;: la communaut&amp;eacute; est-elle possible sans effacement de l&amp;rsquo;alt&amp;eacute;rit&amp;eacute;&amp;nbsp;?&lt;/p&gt;\r\n\r\n&lt;p style=&quot;text-align:justify&quot;&gt;&lt;strong&gt;Mots-cl&amp;eacute;s&lt;/strong&gt;&amp;nbsp;: H.-G. Gadamer, herm&amp;eacute;neutique, alt&amp;eacute;rit&amp;eacute;, compr&amp;eacute;hension, dialogue, &amp;eacute;coute&lt;/p&gt;\r\n", "parent": "psycholinguistique"},
+	{"name" : "Etre à l'écoute de l'autre : la compréhension comme épreuve de l'altérité (dans l'herméneutique de Hans-Georg Gadamer)", "text": "Salut c moi 6", "parent": "sociolinguistique"},
+	{"name" : "Etre à l'écoute de l'autre : la compréhension comme épreuve de l'altérité (dans l'herméneutique de Hans-Georg Gadamer)", "text": "Salut c moi 7", "parent": "TIC"},
+
 	// Mot clef
-	{"name" : "Mot clef 1", "parent": "Auteur 1"},
-	{"name" : "Mot clef 2", "parent": "Auteur 3"},
-	{"name" : "Mot clef 3", "parent": "Auteur 3"},
+	{"name" : "psycholinguistique", "parent": "Parnet"},
+	{"name" : "Mot clef 2", "parent": "Puren"},
+	{"name" : "Mot clef 3", "parent": "Candau"},
+	{"name" : "sociolinguistique", "parent": "Parnet"},
+	{"name" : "épistémologie", "parent": "Parnet"},
+	{"name" : "TIC", "parent": "Parnet"},
+	{"name" : "enseignants", "parent": "Parnet"},
+	{"name" : "langues d'instruction", "parent": "Parnet"},
+
 	// Auteur
-	{"name" : "Auteur 1", "parent": "Type publication 2"},
-	{"name" : "Auteur 2", "parent": "Type publication 5"},
-	{"name" : "Auteur 3", "parent": "Type publication 5"},
+	{"name" : "Parnet", "parent": "hors_serie"},
+	{"name" : "Puren", "parent": "revue"},
+	{"name" : "Candau", "parent": "varia"},
 	// Publication
-	{"name" : "Type publication 1", "parent": "Revue 1"},
-	{"name" : "Type publication 2", "parent": "Revue 1"},
-	{"name" : "Type publication 3", "parent": "Revue 1"},
-	{"name" : "Type publication 4", "parent": "Revue 2"},
-	{"name" : "Type publication 5", "parent": "Revue 3"},
+	{"name" : "hors_serie", "parent": "Notos"},
+	{"name" : "revue", "parent": "Notos"},
+	{"name" : "varia", "parent": "Doctorales 58"},
+	{"name" : "revue", "parent": "Revue TDFLE"},
 	// Revue
-	{"name" : "Revue 1", "parent": "Champs 1"},
-	{"name" : "Revue 2", "parent": "Champs 1"},
-	{"name" : "Revue 3", "parent": "Champs 1"},
-	{"name" : "Revue 4", "parent": "Champs 2"},
-	{"name" : "Revue 5", "parent": "Champs 2"},
-	{"name" : "Revue 6", "parent": "Champs 3"},
+	{"name" : "Revue 1", "parent": "Sciences de l'éducation"},
+	{"name" : "Notos", "parent": "Neurosciences"},
+	{"name" : "Revue 3", "parent": "Sciences de l'information et de la communication"},
+	{"name" : "Revue 4", "parent": "Milieux denses et matériaux"},
+	{"name" : "Revue 5", "parent": "Sciences de l'information et de la communication"},
+	{"name" : "Revue 6", "parent": "Sociologie, démographie"},
+	{"name" : "Revue 6", "parent": "Philosophie"},
+	{"name" : "Revue 6", "parent": "Littératures comparées"},
+	{"name" : "Revue 6", "parent": "Sciences de gestion"},
+	{"name" : "Revue 6", "parent": "Droit public"},
+	{"name" : "Revue 6", "parent": "Droit privé et sciences criminelles"},
+	{"name" : "Revue 6", "parent": "Informatique"},
+	{"name" : "Revue 6", "parent": "Aménagement de l'espace, urbanisme"},
+	{"name" : "Revue 6", "parent": "Mathématiques"},
+	{"name" : "Revue 6", "parent": "Chimie des matériaux"},
+	{"name" : "Revue 6", "parent": "Milieux denses et matériaux"},
+	{"name" : "Revue 6", "parent": "Astronomie, astrophysique"},
+	{"name" : "Revue 6", "parent": "Milieux dilués et optique"},
+	{"name" : "Doctorales 58", "parent": "Neurosciences"},
+	{"name" : "Revue TDFLE", "parent": "Neurosciences"},
+	{"name" : "Global18", "parent": "Philosophie"},
+	{"name" : "Doctorales 58", "parent": "Philosophie"},
+	{"name" : "R2IE", "parent": "Philosophie"},
+	{"name" : "Articulations", "parent": "Philosophie"},
 	// Champs
-	{"name" : "Champs 1", "parent": ""},
-	{"name" : "Champs 2", "parent": ""},
-	{"name" : "Champs 3", "parent": ""},
-	{"name" : "Champs 4", "parent": ""}
+	{"name" : "Neurosciences", "parent": ""},
+	{"name" : "Sciences de l'éducation", "parent": ""},
+	{"name" : "Sciences de l'information et de la communication", "parent": ""},
+	{"name" : "Sociologie, démographie", "parent": ""},
+	{"name" : "Philosophie", "parent": ""},
+	{"name" : "Littératures comparées", "parent": ""},
+	{"name" : "Sciences de gestion", "parent": ""},
+	{"name" : "Droit public", "parent": ""},
+	{"name" : "Droit privé et sciences criminelles", "parent": ""},
+	{"name" : "Informatique", "parent": ""},
+	{"name" : "Aménagement de l'espace, urbanisme", "parent": ""},
+	{"name" : "Mathématiques", "parent": ""},
+	{"name" : "Chimie des matériaux", "parent": ""},
+	{"name" : "Milieux denses et matériaux", "parent": ""},
+	{"name" : "Astronomie, astrophysique", "parent": ""},
+	{"name" : "Milieux dilués et optique", "parent": ""},
+
+
+	{"name" : "Numerev", "parent": ""}
 	];
+
+	
+
+	for(var i = 0; i < data.length; i++)
+	{
+		if(data[i].parent == "" && data[i].name != "Numerev")
+		{
+			data[i].parent = "Numerev";
+		}
+	}
+
+
+	
+	console.log(data);
 
 // *********** Convert flat data into a nice tree ***************
 // create a name: node map
@@ -62,11 +111,12 @@ data.forEach(function(node) {
 });
 
 
+
 // ************** Generate the tree diagram	 *****************
 	// ************** Generate the tree diagram	 *****************
 	var margin = {top: 20, right: 120, bottom: 20, left: 120},
-		width = 1200 - margin.right - margin.left,
-		height = 800 - margin.top - margin.bottom;
+		width = 1260 - margin.right - margin.left,
+		height = 600 - margin.top - margin.bottom;
 		
 	var i = 0,
 		duration = 750,
@@ -82,10 +132,12 @@ data.forEach(function(node) {
 	var svg = d3.select("#graphic").append("svg")
 		.attr("width", width + margin.right + margin.left)
 		.attr("height", height + margin.top + margin.bottom)
-		.attr("class", "border border-warning rounded")
-		.call(d3.behavior.zoom().on("zoom", function () {
-    		svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+		.attr("style", "border: 1px solid gray")
+		.call(d3.behavior.zoom()
+			.on("zoom", function () {
+    			svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
   		}))
+  		.on("dblclick.zoom", null)
 		.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -116,7 +168,8 @@ data.forEach(function(node) {
 	  var nodeEnter = node.enter().append("g")
 		  .attr("class", "node")
 		  .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-		  .on("click", click);
+		  .on("click", click)
+		  .on("dblclick", dblClick);
 
 	  nodeEnter.append("circle")
 		  .attr("r", 1e-6)
@@ -181,7 +234,6 @@ data.forEach(function(node) {
 
 	  // Stash the old positions for transition.
 	  nodes.forEach(function(d) {
-	  	console.log(d.x + " " + d.y);
 		d.x0 = d.x;
 		d.y0 = d.y;
 	  });
@@ -192,10 +244,14 @@ data.forEach(function(node) {
 	  if (d.children) {
 		d._children = d.children;
 		d.children = null;
-	  } else {
+	  } 
+	  else {
 		d.children = d._children;
 		d._children = null;
 	  }
 	  update(d);
 	}
 
+	function dblClick(d) {
+		document.getElementById("box").innerHTML = d.text;//Object.values(d.parent)[0];
+	}
